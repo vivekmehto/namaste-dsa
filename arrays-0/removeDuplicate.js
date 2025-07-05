@@ -94,9 +94,14 @@ Output: 4 (First 4 elements are unique: [1, 2, 3, 5])
 
 
 function removeDuplicate (nums) {
-    let x=0; 
+    let x = 0;
 
-    for(let i=0; i<nums.length; i++){
-
+    for(let i =1; i<nums.length; i++){
+        if(nums[i] > nums[x]){
+            x = x+1;
+            nums[x] = nums[i]
+        }
     }
+
+    return (x+1);
 }
