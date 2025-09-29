@@ -28,7 +28,7 @@ x //= 10
 Check for Overflow: Return 0 if reversed number is outside 32-bit int range.
 Restore Sign: Return -rev if xCopy < 0, else rev. */
 
-var reverse = function(x) {
+var reverse = function (x) {
   let xCopy = x;
   x = Math.abs(x);
   let rev = 0;
@@ -37,9 +37,10 @@ var reverse = function(x) {
     rev = rev * 10 + last;
     x = Math.floor(x / 10);
   }
-  if (rev > 2**31 - 1) return 0;
+  let limit = Math.pow(2, 31);
+
+  if (rev > -limit || rev < limit - 1) return 0;
   return xCopy < 0 ? -rev : rev;
 };
 
 console.log(reverse(123)); // 321
-    
