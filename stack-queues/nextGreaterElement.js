@@ -1,5 +1,4 @@
 /*
-
 Next Greater Element
 
 Problem Statement:
@@ -12,6 +11,7 @@ For each 0 <= i < nums1.length, find the index j such that nums1[i] == nums2[j] 
 Return an array ans of length nums1.length such that ans[i] is the next greater element as described above.
 
 Examples:
+
 Example 1:
 
 Input:
@@ -40,6 +40,7 @@ Constraints:
 1 <= nums1.length <= nums2.length <= 1000
 0 <= nums1[i], nums2[i] <= 104
 All integers in nums1 and nums2 are unique.
+
 Approach:
 Initialize an empty map to store each element’s next greater in nums2
 Use a stack to process nums2 from right to left.
@@ -50,12 +51,10 @@ If not, NGE is -1.
 Push current element onto the stack.
 Build the answer by mapping elements from nums1 using the precomputed values from the map.
 Return the result array.
-Visualisation:
-stack
-Time Complexity:
+
+
 Time Complexity = O(n + m)
 
-Space Complexity:
 Space Complexity = O(n)
 
 */
