@@ -59,35 +59,34 @@ Space Complexity = O(n)
 
 */
 
-var nextGreaterElement = function (nums1, arr) {
-  let ngeMap = {};
-  let stack = [];
-  let n = arr.length;
+var nextGreaterElement = function(nums1, nums2) {
+    
+    let stack = [];
+    let map = {};
 
-  stack.push(arr[n - 1]);
-  ngeMap[arr[n - 1]] = -1;
-  for (let i = n - 2; i >= 0; i--) {
-    let top = stack[stack.length - 1];
-    if (arr[i] < top) {
-      ngeMap[arr[i]] = top;
-    } else {
-      while (stack.length) {
-        if (stack[stack.length - 1] < arr[i]) {
-          stack.pop();
-        } else {
-          ngeMap[arr[i]] = stack[stack.length - 1];
-          break;
-        }
-      }
-      if (stack.length === 0) {
-        ngeMap[arr[i]] = -1;
-      }
+    let n = nums2.length;
+    stack.push(nums2[n-1]);
+    map[nums2[n-1]]= -1;
+
+    for(let i = n-2; i>=0; i--){
+      
+            while(stack.length){
+                if(nums2[i] > stack[stack.length-1] ){
+                    stack.pop();
+                }else{
+                    map[nums2[i]] = stack[stack.length-1];
+                    break;
+                }
+            }
+            if(stack.length === 0){
+                map[nums2[i]] = -1;
+            }
+        stack.push(nums2[i]);
     }
-    stack.push(arr[i]);
-  }
-  let ans = [];
-  for (let i = 0; i < nums1.length; i++) {
-    ans.push(ngeMap[nums1[i]]);
-  }
-  return ans;
+
+    let ans =[];
+    for(let i =0; i<nums1.length; i++){
+        ans.push(map[nums1[i]])
+    }
+    return ans;
 };
