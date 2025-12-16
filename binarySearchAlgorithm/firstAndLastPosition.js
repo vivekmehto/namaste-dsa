@@ -1,16 +1,19 @@
 /*
 Find First and Last Position in Sorted Array
 
-
 Problem Statement:
+
 This problem asks us to find the first and last positions of a given target in a sorted array. If the target is not found, return [-1, -1].
 
 Approach:
+
 Use binary search twice.
 Once to find the **first occurrence** (left bound).
 Once to find the **last occurrence** (right bound).
 Store results in ans[0] and ans[1].
+
 Time & Space Complexity:
+
 Time Complexity: O(logn)
 
 Space Complexity: O(1)
