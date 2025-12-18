@@ -13,7 +13,10 @@ Find middle: m = l + floor((r - l) / 2)
 If arr[m] < arr[m + 1] → we are in ascending slope → shift l = m + 1.
 Else → we are in descending slope or peak → move r = m.
 Loop ends when l == r, that’s the index of a peak.
+
+
 Time & Space Complexity:
+
 Time Complexity: O(logn)
 
 Space Complexity: O(1)
