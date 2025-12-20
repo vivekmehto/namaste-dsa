@@ -6,14 +6,16 @@
 // Once a non-space character is found, start counting characters.
 // Stop counting when a space is found after starting the count.
 // Return the total count.
+
 // Dry Run
 // Input: s = " Hello World "
-
 // Start from the end → skip spaces
 // Start counting at ‘d’ of “World”
 // Count characters: d, l, r, o, W → 5
 // Stop at space → return 5
+
 // Time & Space Complexity
+
 // Time Complexity: O(n), where n is the length of the string
 // Space Complexity: O(1), uses constant space
 

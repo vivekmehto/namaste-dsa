@@ -16,7 +16,9 @@ Else, right side is sorted:
 If target ∈ (nums[m], nums[r]], move right: l = m + 1.
 Else, move left: r = m - 1.
 If not found, return -1.
+
 Time & Space Complexity:
+
 Time Complexity: O(logn)
 
 Space Complexity: O(1)

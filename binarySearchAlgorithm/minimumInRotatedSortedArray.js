@@ -16,7 +16,9 @@ Find mid: m = l + floor((r - l) / 2).
 If a[m] < a[m - 1] → pivot found → return a[m].
 If a[l] > a[m] → rotation point is left → r = m - 1.
 Else → rotation point is right → l = m + 1.
+
 Time & Space Complexity:
+
 Time Complexity: O(logn)
 
 Space Complexity: O(1)

@@ -12,7 +12,9 @@ If isBadVersion(m) is false → move right (l = m + 1).
 Else (true) → move left or stay (r = m).
 Loop ends when l == r, which is the first bad version.
 Return r.
+
 Time & Space Complexity:
+
 Time Complexity: O(logn)
 
 Space Complexity: O(1)

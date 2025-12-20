@@ -9,7 +9,9 @@ Use binary search:
 If arr[m + 1] > arr[m], peak is to the right → l = m + 1.
 Else peak is at m or to the left → r = m.
 When loop ends, l (or r) is the peak index.
+
 Time & Space Complexity:
+
 Time Complexity: O(logn)
 
 Space Complexity: O(1)
